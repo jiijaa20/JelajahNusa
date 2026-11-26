@@ -6,7 +6,7 @@
     --navy: #10202d;
     --abu-tua: #5f7080;
     --warna-line: #e3e8ee;
-    --pasir: #f2b84b;
+    --emas: #f2b84b;
     --radius-lg: 28px;
     --radius-md: 20px;
     --radius-sm: 14px;
@@ -134,5 +134,171 @@ a:hover{
 
 .hero-title{
     font-weight: 800;
-    font-size: clamp(34px, );
+    font-size: 34px;
+    line-height: 1.04;
+    letter-spacing: -1px;
+    text-align: center;
+    max-width: 544px;
+    margin: 0 auto 29px;
+}
+
+@media (min-width: 768px)  { .hero-title { font-size: 43px; letter-spacing: -1.5px; max-width: 688px; } }
+@media (min-width: 992px)  { .hero-title { font-size: 56px; letter-spacing: -2px;   max-width: 896px; } }
+@media (min-width: 1200px) { .hero-title { font-size: 67px; letter-spacing: -2.3px; max-width: 1072px; } }
+@media (min-width: 1400px) { .hero-title { font-size: 74px; letter-spacing: -2.6px; max-width: 1184px; } }
+
+.hero-visual {
+  position: relative;
+  height: 460px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: linear-gradient(135deg, #1b86c4, #073b5c);
+}
+
+@media (min-width: 992px)  { .hero-visual { height: 500px; } }
+@media (min-width: 1200px) { .hero-visual { height: 600px; } }
+@media (min-width: 1280px) { .hero-visual { height: 640px; } }
+
+.hero-visual > img#heroImg{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity .35s ease;
+}
+.hero-visual > img#heroImg.is-fading{
+    opacity: 0;
+}
+
+.hero-shade{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(7,59,92,.25) 0%, rgba(7,59,92,0) 35%, rgba(7,59,92,.72) 100%);
+}
+
+.hero-pills{
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.pill-glass{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 18px;
+    border-radius: 100px;
+    border: 1px solid #cacdd1;
+    background: rgba(255,255,255,.16);
+    backdrop-filter: blur(6px);
+}
+
+.hero-badge{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border-radius: 100px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+}
+
+.stars{
+    color: var(--emas);
+}
+
+.hero-copy{
+    position: absolute;
+    left: 32px;
+    bottom: 90px;
+    max-width: 520px;
+    color: #fff;
+}
+
+.hero-sub{
+    font-size: 17px;
+    margin-bottom: 19px;
+    text-shadow: rgba(0, 0, 0, .35);
+}
+
+.hero-next{
+    position: absolute;
+    right: 24px;
+    bottom: 82px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 6px 13px;
+    width: 330px;
+    text-align: left;
+    background: #fff;
+    border: 0;
+    border-radius: var(--radius-sm);
+    padding: 13px;
+    box-shadow: var(--shadow-float);
+    transition: transform .2s;
+}
+
+.hero-next:hover{
+    transform: translateY(-3px);
+}
+.hero-next-count{
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 13px;
+}
+.hero-next-count small{
+    color: var(--abu-tua);
+    font-size: 13px;
+}
+.hero-next img{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 120px;
+    height: 78px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: var(--putih);
+}
+.hero-next-text{
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #5f7080;
+}
+
+/* SEARCH BAR */
+.search-bar{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    align-items: center;
+    gap: 0;
+    width: min(1000px, calc(100% - 40px));
+    margin: -52px auto 0;
+    background: #fff;
+    border-radius: 24px;
+    padding: 14px 16px 14px 19px;
+    box-shadow: var(--shadow-float);
+}
+
+.sb-field{
+    padding: 3px 18px;
+    border-right: 1px solid var(--jn-line);
+    min-width: 0;
+}
+.sb-field label{
+    font-size: 12px;
+    color: var(--abu-tua);
+    font-weight: 600;
+    display: ;
 }
